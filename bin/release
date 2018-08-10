@@ -3,4 +3,8 @@
 cat <<EOF
 default_process_types:
   web: .meteor/heroku_build/bin/node \$NODEJS_PARAMS .meteor/heroku_build/app/main.js
+  worker: .meteor/heroku_build/bin/node \$WORKER_PATH
 EOF
+
+# path for worker in most cases:
+#worker: .meteor/heroku_build/bin/node .meteor/heroku_build/app/programs/server/assets/app/worker/worker.js
